@@ -8,7 +8,7 @@
     "build": "webpack --mode production",
     "deployd": "gh-pages -d build"
   },
-  "homepage": "https://aricanomx.github.io/IntelimetricaTest/",
+  "homepage": "https://aricanomx.github.io/intelimetrica",
   "keywords": [
     "intelimetrica",
     "test",
@@ -18,7 +18,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://aricanomx.github.io/InterlimetricaTest/."
+    "url": "git+https://aricanomx.github.io/interlimetrica"
   },
   "dependencies": {
     "@reach/combobox": "^0.13.2",
