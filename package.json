@@ -19,12 +19,14 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com//"
+    "url": "git+https://aricanomx.github.io/InterlimetricaTest/."
   },
   "dependencies": {
     "@reach/combobox": "^0.13.2",
     "@react-google-maps/api": "^2.1.1",
     "@react-google-maps/infobox": "^2.1.1",
+    "extract-loader": "^5.1.0",
+    "handlebars-loader": "^1.7.1",
     "intersection-observer": "^0.12.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

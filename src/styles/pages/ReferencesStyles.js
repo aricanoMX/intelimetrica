@@ -25,6 +25,6 @@ export const ComboboxStyles = styled.div`
   transform: translateX(-50%);
   width: 100%;
   height: 25px;
-  max-width: 300px;
+  width: 300px;
   z-index: 9;
 `;

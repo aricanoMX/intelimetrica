@@ -57,7 +57,7 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ['handlebars-loader', 'extract-loader', 'css-loader'],
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },
