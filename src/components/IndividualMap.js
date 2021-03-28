@@ -10,7 +10,6 @@ import mapColors from 'Components/mapStyles';
 import { StyledIndividualMap } from 'Styles/components/IndividualMapStyles';
 
 export const IndividualMap = ({ name, street, city, state, lat, lng }) => {
-  const [map, setMap] = useState(null);
   const [showMessage, setShowMessage] = useState(null);
 
   const mapStyles = {

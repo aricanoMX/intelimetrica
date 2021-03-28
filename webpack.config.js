@@ -55,6 +55,10 @@ module.exports = {
         enforce: 'pre',
         use: ['source-map-loader'],
       },
+      {
+        test: /\.css$/i,
+        use: ['handlebars-loader', 'extract-loader', 'css-loader'],
+      },
     ],
   },
   plugins: [
