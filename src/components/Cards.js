@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FacebookProvider, Like, ShareButton } from 'react-facebook';
 
 import { IndividualMap } from './IndividualMap';
 
@@ -11,8 +12,6 @@ import {
   FSButton,
   FIcon,
 } from 'Styles/components/CardsStyles';
-
-import { FacebookProvider, Like, ShareButton } from 'react-facebook';
 
 export const Cards = ({ filteredRestaurants }) => {
   const [showInfo, setShowInfo] = useState(false);
@@ -28,7 +27,7 @@ export const Cards = ({ filteredRestaurants }) => {
           <InfoContainer>
             <h1>{name}</h1>
             <p>{rating}</p>
-            <br />
+
             <p>
               Web Page: &nbsp;{' '}
               <a href={contact.site} target="_blank" rel="noopener">
@@ -42,7 +41,7 @@ export const Cards = ({ filteredRestaurants }) => {
               </a>
             </p>
             <p>Phone: &nbsp;{contact.phone}</p>
-            <br />
+
             <p>
               {address.street}, {address.city}, {address.state}.
             </p>

@@ -7,4 +7,10 @@ export const StyledHome = styled.main`
   grid-template-areas:
     'input'
     'main';
+  @media ${devices.breakpointsTablet} {
+    grid-template-rows: 62.5px 1fr;
+  }
+  @media ${devices.breakpointsDesktop} {
+    grid-template-rows: 75px 1fr;
+  }
 `;

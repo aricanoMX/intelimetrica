@@ -14,11 +14,21 @@ export const StyledCards = styled.div`
   padding: 0.5rem 0.5rem 0 0.5rem;
   overflow-y: auto;
   gap: 1rem 0;
+  @media ${devices.breakpointsTablet} {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  @media ${devices.breakpointsDesktop} {
+  }
 `;
 export const CardContainer = styled.div`
   display: grid;
-  width: 100%;
   grid-template-columns: 50% 50%;
+  width: 100%;
+  height: 8.5rem;
   border-radius: 1rem;
   background-color: ${palette.whiteColorAlpha};
   box-shadow: 0.0625rem 0.125rem 0.125rem rgba(0, 0, 0, 0.5);
@@ -32,6 +42,12 @@ export const CardContainer = styled.div`
     css`
       height: 4.25rem;
     `};
+  @media ${devices.breakpointsTablet} {
+    height: 12rem;
+    /* grid-template-columns: repeat(3, 1fr); */
+  }
+  @media ${devices.breakpointsDesktop} {
+  }
 `;
 export const InfoContainer = styled.div`
   font-size: 0.5rem;
@@ -48,6 +64,15 @@ export const InfoContainer = styled.div`
   }
   & p {
     display: flex;
+  }
+  @media ${devices.breakpointsTablet} {
+    p {
+      /* display: flex; */
+      align-items: center;
+      font-size: 0.55rem;
+    }
+  }
+  @media ${devices.breakpointsDesktop} {
   }
 `;
 export const MapShareContainer = styled.div`

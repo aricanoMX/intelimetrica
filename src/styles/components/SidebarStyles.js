@@ -54,7 +54,7 @@ export const SidebarStyle = styled.section`
   background-color: #ffece6;
   background-image: url(${Bg});
   background-position: center center;
-  background-size: 100% no-repeat;
+  background-size: cover;
   border-radius: 0 1rem 1rem 0;
   border-right: 2px solid rgba(0, 0, 0, 0.5);
   ${(props) =>
@@ -80,7 +80,6 @@ export const SidebarStyle = styled.section`
   }
 
   @media ${devices.breakpointsTablet} {
-    display: none;
   }
   @media ${devices.breakpointsDesktop} {
     display: none;
@@ -109,6 +108,7 @@ export const Navbar = styled.ul`
   width: 90%;
   & li {
     padding: 0.5rem;
+    list-style: none;
     & a {
       display: flex;
       justify-content: center;
@@ -121,5 +121,18 @@ export const Navbar = styled.ul`
       & span {
       }
     }
+  }
+  @media ${devices.breakpointsTablet} {
+    & li {
+      & a {
+        gap: 0 0.5rem;
+        & span {
+          font-size: 1.75rem;
+        }
+      }
+    }
+  }
+  @media ${devices.breakpointsDesktop} {
+    display: none;
   }
 `;

@@ -24,4 +24,62 @@ export const StyledHeader = styled.div`
     left: 1rem;
     border: none;
   }
+  & nav {
+    display: none;
+  }
+  @media ${devices.breakpointsTablet} {
+    & a {
+      & picture {
+        transform: translateY(1rem);
+        height: 100%;
+        & img {
+          height: 100%;
+        }
+      }
+    }
+    & button {
+      top: 1.5rem;
+      left: 1.5rem;
+      & img {
+        height: 2.125rem;
+        width: 2.125rem;
+      }
+    }
+  }
+  @media ${devices.breakpointsDesktop} {
+    & a {
+      & picture {
+        transform: translateY(1rem);
+        height: 100%;
+        & img {
+          height: 200%;
+        }
+      }
+    }
+    & button {
+      display: none;
+    }
+    & nav {
+      display: flex;
+      position: absolute;
+      right: 3rem;
+      top: 5%;
+      width: 20%;
+      & li {
+        width: 100%;
+        list-style: none;
+        & :nth-of-type(2) {
+          opacity: 0.15;
+        }
+        & a {
+          /* display: flex; */
+          width: 100%;
+          font-weight: bold;
+          &:active {
+            color: black;
+          }
+        }
+      }
+    }
+  }
 `;

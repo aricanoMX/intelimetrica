@@ -13,8 +13,6 @@ export const Input = ({ handleSearch, search, searchInput }) => {
           value={search}
           ref={searchInput}
         />
-        <a>A-Z</a>
-        <a>Rating</a>
       </div>
     </StyledInput>
   );

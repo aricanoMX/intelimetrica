@@ -23,6 +23,18 @@ export const Header = ({ setState }) => {
           <img src={Logo} alt="Logo Melp" />
         </picture>
       </Link>
+      <nav>
+        <li>
+          <Link to="/References">
+            <p>All Markers</p>
+          </Link>
+        </li>
+        <li>
+          <Link to="/Recomendations">
+            <p>Recomendations</p>
+          </Link>
+        </li>
+      </nav>
     </StyledHeader>
   );
 };

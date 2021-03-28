@@ -12,26 +12,24 @@ export const StyledLayout = styled.div`
   background-image: url(${BG});
   background-size: 100% no-repeat;
   & main {
-    /* background-position: center center; */
     width: 100%;
     margin: 0 auto;
     padding: 1rem 1rem 0;
     overflow-y: auto;
-
     & ::-webkit-scrollbar {
       display: none;
     }
   }
-  /*
   @media ${devices.breakpointsTablet} {
+    grid-template-rows: 75px 1fr;
     & main {
       padding: 1.5rem 2.5rem 0;
     }
   }
   @media ${devices.breakpointsDesktop} {
     & main {
-      padding: 4.5rem 4.5rem 2rem;
+      padding: 4.5rem 4.5rem 0rem;
       max-width: ${sizes.desktop};
     }
-  } */
+  }
 `;

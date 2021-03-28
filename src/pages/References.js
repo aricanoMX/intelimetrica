@@ -60,7 +60,7 @@ export const References = () => {
   return (
     <StyledReferences>
       <LoadMap googleMapsApiKey="AIzaSyDJlPRuTocB2swb6sNQq2NBz6-WKFW0o5Y">
-        <Search panTo={zoomTo} />
+        {/* <Search panTo={zoomTo} /> */}
         <GoogleMap
           mapContainerStyle={mapStyles}
           zoom={15}
@@ -95,54 +95,54 @@ export const References = () => {
   );
 };
 
-const Search = ({ panTo }) => {
-  const {
-    ready,
-    value,
-    suggestions: { status, data },
-    setValue,
-    clearSuggestions,
-  } = usePlacesAutocomplete({
-    requestOptions: {
-      location: {
-        lat: () => 19.440057053713137,
-        lng: () => -99.12704709742486,
-      },
-      radius: 200 * 1000,
-    },
-  });
+// const Search = ({ panTo }) => {
+//   const {
+//     ready,
+//     value,
+//     suggestions: { status, data },
+//     setValue,
+//     clearSuggestions,
+//   } = usePlacesAutocomplete({
+//     requestOptions: {
+//       location: {
+//         lat: () => 19.440057053713137,
+//         lng: () => -99.12704709742486,
+//       },
+//       radius: 200 * 1000,
+//     },
+//   });
 
-  return (
-    <ComboboxStyles>
-      <Combobox
-        onSelect={async (address) => {
-          setValue(address, false);
-          clearSuggestions();
-          try {
-            const results = await getGeocode({ address });
-            const { lat, lng } = await getLatLng(results[0]);
-            console.log(lat, lng);
-            panTo({ lat, lng });
-          } catch (error) {
-            console.log('error!');
-          }
-        }}
-      >
-        <ComboboxInput
-          value={value}
-          onChange={(event) => setValue(event.target.value)}
-          disabled={!ready}
-          placeholder="Enter an address and find awesome restaurants"
-        />
-        <ComboboxPopover>
-          <ComboboxList>
-            {status === 'OK' &&
-              data.map(({ id, description }) => (
-                <ComboboxOption key={id} value={description} />
-              ))}
-          </ComboboxList>
-        </ComboboxPopover>
-      </Combobox>
-    </ComboboxStyles>
-  );
-};
+//   return (
+//     <ComboboxStyles>
+//       <Combobox
+//         onSelect={async (address) => {
+//           setValue(address, false);
+//           clearSuggestions();
+//           try {
+//             const results = await getGeocode({ address });
+//             const { lat, lng } = await getLatLng(results[0]);
+//             console.log(lat, lng);
+//             panTo({ lat, lng });
+//           } catch (error) {
+//             console.log('error!');
+//           }
+//         }}
+//       >
+//         <ComboboxInput
+//           value={value}
+//           onChange={(event) => setValue(event.target.value)}
+//           disabled={!ready}
+//           placeholder="Enter an address and find awesome restaurants"
+//         />
+//         <ComboboxPopover>
+//           <ComboboxList>
+//             {status === 'OK' &&
+//               data.map(({ id, description }) => (
+//                 <ComboboxOption key={id} value={description} />
+//               ))}
+//           </ComboboxList>
+//         </ComboboxPopover>
+//       </Combobox>
+//     </ComboboxStyles>
+//   );
+// };
