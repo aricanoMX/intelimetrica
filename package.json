@@ -18,7 +18,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://aricanomx.github.io/interlimetrica"
+    "url": "git+https://aricanomx.github.io/intelimetrica"
   },
   "dependencies": {
     "@reach/combobox": "^0.13.2",
