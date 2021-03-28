@@ -1,6 +1,8 @@
 import styled, { css } from 'styled-components';
 import { devices, sizes, palette } from 'Styles/GlobalStyles';
 
+import { FacebookShareButton, FacebookIcon } from 'react-share';
+
 export const LazyStyles = styled.div``;
 
 export const StyledCards = styled.div`
@@ -56,3 +58,20 @@ export const MapShareContainer = styled.div`
     'maps'
     'share';
 `;
+
+export const NetworkContainer = styled.div`
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const FSButton = styled(FacebookShareButton)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & p {
+    font-size: 0.75rem;
+  }
+`;
+export const FIcon = styled(FacebookIcon)``;

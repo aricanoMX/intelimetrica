@@ -7,7 +7,12 @@ import {
   CardContainer,
   InfoContainer,
   MapShareContainer,
+  NetworkContainer,
+  FSButton,
+  FIcon,
 } from 'Styles/components/CardsStyles';
+
+import { FacebookProvider, Like, ShareButton } from 'react-facebook';
 
 export const Cards = ({ filteredRestaurants }) => {
   const [showInfo, setShowInfo] = useState(false);
@@ -51,7 +56,20 @@ export const Cards = ({ filteredRestaurants }) => {
               lat={address.location.lat}
               lng={address.location.lng}
             />
-            <p>botonoes de share</p>
+            <NetworkContainer>
+              <FSButton url={contact.site}>
+                <p>Share &nbsp;</p>
+                <FIcon
+                  logoFillColor="white"
+                  round={true}
+                  height="24px"
+                  width="24px"
+                />
+              </FSButton>
+              <FacebookProvider>
+                <ShareButton href="http://www.fb.com">Like </ShareButton>
+              </FacebookProvider>
+            </NetworkContainer>
           </MapShareContainer>
         </CardContainer>
       ))}
