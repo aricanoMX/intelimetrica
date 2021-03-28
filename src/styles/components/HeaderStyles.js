@@ -72,10 +72,10 @@ export const StyledHeader = styled.div`
           opacity: 0.15;
         }
         & a {
-          /* display: flex; */
           width: 100%;
           font-weight: bold;
-          &:active {
+
+          & :active {
             color: black;
           }
         }
