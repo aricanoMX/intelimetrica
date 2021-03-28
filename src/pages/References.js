@@ -3,7 +3,11 @@ import { GoogleMap, Marker, InfoWindow } from '@react-google-maps/api';
 
 import { useFetch } from 'Hooks/useFetch';
 
-import { StyledReferences, LoadMap } from 'Styles/pages/ReferencesStyles';
+import {
+  StyledReferences,
+  LoadMap,
+  ComboboxStyles,
+} from 'Styles/pages/ReferencesStyles';
 import mapColors from 'Components/mapStyles';
 
 import usePlacesAutocomplete, {
@@ -104,7 +108,7 @@ const Search = () => {
   });
 
   return (
-    <div className="Search-combobox">
+    <ComboboxStyles>
       <Combobox
         onSelect={async (address) => {
           try {
@@ -129,6 +133,6 @@ const Search = () => {
             ))}
         </ComboboxPopover>
       </Combobox>
-    </div>
+    </ComboboxStyles>
   );
 };
