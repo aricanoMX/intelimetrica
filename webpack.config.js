@@ -6,9 +6,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './src/index.js',
   output: {
-    filename: 'dist.js',
-    sourceMapFilename: 'dist.js.map',
-    path: path.resolve(__dirname, 'dist'),
+    // filename: 'bundle.js',
+    filename: 'build.js',
+    sourceMapFilename: 'build.js.map',
+    path: path.resolve(__dirname, 'build'),
+    publicPath: '/',
+
     publicPath: '/',
   },
   resolve: {
