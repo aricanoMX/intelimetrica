@@ -1,15 +1,28 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Logo from 'Assets/Logo.png';
 
 import { StyledHeader } from 'Styles/components/HeaderStyles';
 
-export const Header = () => {
+export const Header = ({ setState }) => {
+  const handleOpen = () => {
+    setState('true');
+  };
+
   return (
     <StyledHeader>
-      <picture>
-        <img src={Logo} alt="Logo Melp" />
-      </picture>
+      <button onClick={handleOpen}>
+        <img
+          src="https://assets-juanjosemayorga-website.s3.amazonaws.com/tracker-project-s3/menu-24px.svg"
+          alt="burger-menu"
+        />
+      </button>
+      <Link to="/">
+        <picture>
+          <img src={Logo} alt="Logo Melp" />
+        </picture>
+      </Link>
     </StyledHeader>
   );
 };

@@ -7,10 +7,6 @@ import { Cards } from 'Components/Cards';
 
 import { StyledHome } from 'Styles/pages/HomeStyles';
 
-// const initialState = {
-//   cards: [],
-// };
-
 export const Home = () => {
   const { data } = useFetch();
   const [search, setSearch] = useState('');
