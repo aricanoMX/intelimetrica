@@ -121,6 +121,9 @@ export const Navbar = styled.ul`
       & span {
       }
     }
+    & :last-child {
+      opacity: 0.1;
+    }
   }
   @media ${devices.breakpointsTablet} {
     & li {

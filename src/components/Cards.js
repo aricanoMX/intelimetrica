@@ -47,27 +47,27 @@ export const Cards = ({ filteredRestaurants }) => {
             </p>
           </InfoContainer>
           <MapShareContainer>
-            <IndividualMap
+            {/* <IndividualMap
               name={name}
               street={address.street}
               city={address.city}
               state={address.state}
               lat={address.location.lat}
               lng={address.location.lng}
-            />
+            /> */}
             <NetworkContainer>
               <FSButton url={contact.site}>
                 <p>Share &nbsp;</p>
                 <FIcon
-                  logoFillColor="white"
+                  logofillcolor="white"
                   round={true}
                   height="24px"
                   width="24px"
                 />
               </FSButton>
-              <FacebookProvider>
+              {/* <FacebookProvider>
                 <ShareButton href="http://www.fb.com">Like </ShareButton>
-              </FacebookProvider>
+              </FacebookProvider> */}
             </NetworkContainer>
           </MapShareContainer>
         </CardContainer>

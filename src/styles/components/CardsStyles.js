@@ -3,8 +3,6 @@ import { devices, sizes, palette } from 'Styles/GlobalStyles';
 
 import { FacebookShareButton, FacebookIcon } from 'react-share';
 
-export const LazyStyles = styled.div``;
-
 export const StyledCards = styled.div`
   grid-area: main;
   display: flex;
